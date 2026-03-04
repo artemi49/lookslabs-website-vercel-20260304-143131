@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="./favicon.png" />
+    <title>Waitlist – LooksLab</title>
+    <meta
+      name="description"
+      content="Trage dich in die LooksLab Waitlist ein und sei als Erster dabei."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css" />
+    <style>
+      .waitlist-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .waitlist-page::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(147, 197, 253, 0.25) 0%,
+          rgba(147, 197, 253, 0.08) 45%,
+          rgba(147, 197, 253, 0.02) 70%,
+          transparent 100%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+      .waitlist-page .back {
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        z-index: 100;
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: color 0.2s, background 0.2s;
+      }
+      .waitlist-page .back:hover {
+        color: var(--text);
+        background: rgba(0, 0, 0, 0.04);
+      }
+      .waitlist-page .content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 480px;
+      }
+      .waitlist-page h1 {
+        margin: 0 0 12px;
+        font-family: var(--font-heading);
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        font-weight: 400;
+        letter-spacing: 0.02em;
+      }
+      .waitlist-page .subtitle {
+        font-size: 1.1rem;
+        color: var(--muted);
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+      .waitlist-page .rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 40px;
+      }
+      .waitlist-page .rating .stars {
+        color: #f5a623;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+      }
+      .waitlist-page .rating span {
+        font-size: 0.8rem;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .waitlist-page .waitlist-wrap {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 32px 28px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      }
+      .waitlist-page .lang-link {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        z-index: 100;
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+      .waitlist-page .lang-link:hover { color: var(--text); }
+      @media (max-width: 600px) {
+        .waitlist-page { padding: 72px 16px 40px; }
+        .waitlist-page .back { left: 16px; top: 20px; }
+        .waitlist-page .lang-link { right: 16px; top: 20px; }
+        .waitlist-page .waitlist-wrap { padding: 24px 20px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="waitlist-page">
+      <a href="./index.html" class="back">← Zurück</a>
+      <a href="./waitlist-en.html" class="lang-link">EN</a>
+
+      <div class="content">
+        <h1>LooksLab</h1>
+        <p class="subtitle">Trage dich ein und sei als Erster dabei.</p>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span>4.8 · APP RATINGS</span>
+        </div>
+
+        <div class="waitlist-wrap">
+          <div id="getWaitlistContainer" data-waitlist_id="32580" data-widget_type="WIDGET_1"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js"></script>
+  </body>
+</html>

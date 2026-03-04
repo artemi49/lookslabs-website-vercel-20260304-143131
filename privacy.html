@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="./favicon.png" />
+    <title>Privacy Policy – LooksLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .privacy-page { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+      @media (max-width: 600px) { .privacy-page { padding: 32px 16px 60px; } }
+      .privacy-page h1 { font-size: 1.75rem; margin: 0 0 8px; }
+      .privacy-page .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+      .privacy-page h2 { font-size: 1.15rem; margin: 28px 0 12px; }
+      .privacy-page h3 { font-size: 1rem; margin: 20px 0 8px; font-weight: 600; }
+      .privacy-page p, .privacy-page li { color: var(--muted); line-height: 1.7; margin: 0 0 12px; }
+      .privacy-page ul { padding-left: 20px; margin: 0 0 16px; }
+      .privacy-page .toc { background: var(--bg-alt, #f5f5f5); padding: 20px; border-radius: 8px; margin: 20px 0; }
+      .privacy-page .toc ul { list-style: none; padding-left: 0; margin: 0; }
+      .privacy-page .toc li { margin: 6px 0; }
+      .privacy-page .toc a { color: var(--dark); font-weight: 500; text-decoration: none; }
+      .privacy-page .toc a:hover { text-decoration: underline; }
+      .privacy-page a { color: var(--dark); font-weight: 600; }
+      .privacy-page .back { display: inline-block; margin-bottom: 24px; text-decoration: none; color: var(--muted); font-weight: 500; }
+      .privacy-page .back:hover { color: var(--text); }
+      .privacy-page .highlight-box { background: rgba(0,0,0,0.03); padding: 16px; border-radius: 8px; margin: 16px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="privacy-page">
+      <a href="./index.html" class="back">← Zurück zur Startseite</a>
+
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: March 3, 2026</p>
+
+      <h2>1. Introduction</h2>
+      <p>This Privacy Policy ("Policy") for LooksLab ("we," "us," or "our") describes how and why we access, collect, store, use, and share ("process") your personal information when you use our services ("Services"), including when you:</p>
+      <ul>
+        <li>Download and use our mobile application (LooksLab) on iPhone</li>
+        <li>Visit our website at lookslab.de or related domains</li>
+        <li>Join our waitlist (e.g. via GetWaitlist)</li>
+        <li>Engage with us in other related ways, including support requests or marketing</li>
+      </ul>
+      <p>Questions or concerns? Contact us at <a href="mailto:info@lookslab.de">info@lookslab.de</a>. If you do not agree with our policies, please do not use our Services.</p>
+
+      <h2>2. Table of Contents</h2>
+      <nav class="toc">
+        <ul>
+          <li><a href="#summary">3. Summary of Key Points</a></li>
+          <li><a href="#collect">4. What Information Do We Collect?</a></li>
+          <li><a href="#process">5. How Do We Process Your Information?</a></li>
+          <li><a href="#facial">6. Facial Image & Biometric Processing</a></li>
+          <li><a href="#features">7. Feature-Specific Data Processing</a></li>
+          <li><a href="#share">8. When and With Whom Do We Share Your Information?</a></li>
+          <li><a href="#retention">9. How Long Do We Keep Your Information?</a></li>
+          <li><a href="#security">10. How Do We Keep Your Information Safe?</a></li>
+          <li><a href="#rights">11. What Are Your Privacy Rights?</a></li>
+          <li><a href="#children">12. Children's Privacy</a></li>
+          <li><a href="#transfers">13. International Data Transfers</a></li>
+          <li><a href="#updates">14. Updates to This Policy</a></li>
+          <li><a href="#contact">15. Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="summary">3. Summary of Key Points</h2>
+      <ul>
+        <li><strong>What we process:</strong> Account data, profile data (gender, age, skin type, etc.), facial images for analysis, chat messages, usage data, and payment data (when applicable via RevenueCat).</li>
+        <li><strong>Facial images:</strong> We process facial images for Face Harmony Scan, Skin, Teeth & Hair analysis. Images are stored securely in Supabase to provide your scan history and analysis results. We do not use facial images to train AI models or for marketing.</li>
+        <li><strong>Face Harmony:</strong> Facial landmark analysis runs on your device (MediaPipe). Only scan results and optional images are stored in the cloud.</li>
+        <li><strong>Third parties:</strong> We use Supabase (auth, storage, database), AI/analysis providers via Supabase Edge Functions, RevenueCat (payments), and analytics. We do not sell your data.</li>
+        <li><strong>Your rights:</strong> Access, correction, deletion, data portability, and objection where applicable (GDPR, CCPA, etc.). Contact us at <a href="mailto:info@lookslab.de">info@lookslab.de</a> to exercise these rights.</li>
+      </ul>
+
+      <h2 id="collect">4. What Information Do We Collect?</h2>
+
+      <h3>4.1 Information You Provide</h3>
+      <ul>
+        <li><strong>Account data:</strong> When you sign up (e.g. anonymously via Supabase Auth), we store your user ID and session information.</li>
+        <li><strong>Profile data:</strong> During onboarding or in settings, you may provide: gender, age, ethnicity, height, weight, fitness level, skin type, eye color, notification preferences, and camera permission status.</li>
+        <li><strong>Facial images:</strong> Photos you capture or upload for Face Harmony Scan, Skin, Teeth, or Hair analysis.</li>
+        <li><strong>Chat messages:</strong> Messages you send in the Chat Coach feature.</li>
+        <li><strong>Waitlist:</strong> If you join our waitlist on the website, we receive your email address and any other information you provide via the GetWaitlist widget.</li>
+      </ul>
+
+      <h3>4.2 Sensitive Information</h3>
+      <p>Facial images and biometric data derived from them (e.g. facial landmarks, analysis results) are processed for Face Harmony Scan, Skin, Teeth, and Hair analysis. These images are stored to provide your scan history, personalized Daily Task Plan, and analysis results. They are not used for facial recognition, identification, or marketing. We treat this data with heightened care and comply with applicable biometric and data protection laws.</p>
+
+      <h3>4.3 Automatically Collected Information</h3>
+      <ul>
+        <li><strong>Device data:</strong> Device type, operating system, app version.</li>
+        <li><strong>Usage data:</strong> Screen views, feature usage, paywall interactions (e.g. paywall shown, plan selected, purchase completed) for analytics.</li>
+        <li><strong>Technical data:</strong> IP address, timestamps, and similar identifiers when you use our Services.</li>
+      </ul>
+
+      <h2 id="process">5. How Do We Process Your Information?</h2>
+      <p>We process your information to:</p>
+      <ul>
+        <li>Provide Face Harmony, Skin, Teeth & Hair analysis</li>
+        <li>Create and manage your account</li>
+        <li>Generate your personalized Daily Task Plan</li>
+        <li>Store your scan history and analysis results</li>
+        <li>Power the Chat Coach feature</li>
+        <li>Process payments and manage subscriptions (via RevenueCat when applicable)</li>
+        <li>Improve our Services and analytics</li>
+        <li>Respond to support requests and communicate with you</li>
+      </ul>
+      <p><strong>Legal bases (where applicable, e.g. GDPR):</strong> We process your data based on (a) your consent, (b) performance of our contract with you, (c) our legitimate interests (e.g. improving the app, security), or (d) legal obligations.</p>
+
+      <h2 id="facial">6. Facial Image & Biometric Processing</h2>
+      <p>When you use our scan features, you capture or upload photos. These images are:</p>
+      <ul>
+        <li>Transmitted securely (HTTPS) to our servers</li>
+        <li>Stored in Supabase Storage to provide your scan history and analysis results</li>
+        <li>Processed for Face Harmony, Skin, Teeth & Hair analysis (which may involve AI services via Supabase Edge Functions)</li>
+        <li>Not used for facial recognition, identification, or training AI models</li>
+        <li>Not shared with third parties for marketing or advertising</li>
+      </ul>
+      <h3>6.1 Face Harmony Scan</h3>
+      <p>Face Harmony analysis uses facial landmark detection that runs primarily on your device (e.g. via MediaPipe). Only the resulting scores, metrics, and optionally the image are stored in our cloud. Raw landmark data may be stored to support your scan history.</p>
+      <h3>6.2 Skin, Teeth & Hair Analysis</h3>
+      <p>For Skin, Teeth, and Hair analysis, images are sent to our Supabase Edge Functions (e.g. analyze-skin, analyze-teeth, analyze-hair). These functions may use AI/ML services to generate analysis. Images are resized and compressed before transmission. Analysis results and images are stored in our database and storage.</p>
+      <p>You can delete individual scan results or your entire account at any time. Contact us at <a href="mailto:info@lookslab.de">info@lookslab.de</a> to request deletion.</p>
+
+      <h2 id="features">7. Feature-Specific Data Processing</h2>
+      <h3>7.1 Daily Task Plan</h3>
+      <p>Your Daily Task Plan is generated based on your scan results, profile data, and preferences. The generate-daily-tasks Edge Function processes this data to create personalized recommendations. Task data is stored in our database.</p>
+      <h3>7.2 Chat Coach</h3>
+      <p>The Chat Coach feature sends your messages and context (e.g. goals, session info) to our chat-coach Edge Function. Responses are generated using AI and stored in our database to maintain conversation history.</p>
+      <h3>7.3 Analytics</h3>
+      <p>We track events such as paywall interactions, premium state changes, and feature usage via our analytics-track Edge Function. This helps us improve the app and understand usage patterns. Data is anonymized where possible.</p>
+      <h3>7.4 Payments (RevenueCat)</h3>
+      <p>When you subscribe or make in-app purchases, RevenueCat processes payment and subscription data. We receive subscription status and related identifiers to unlock premium features. We do not store full payment card details.</p>
+
+      <h2 id="share">8. When and With Whom Do We Share Your Information?</h2>
+      <p>We may share information with:</p>
+      <ul>
+        <li><strong>Supabase:</strong> Auth, database, and storage (hosting of your account, profile, scans, chat, and analysis data). Supabase is a service provider that processes data on our behalf.</li>
+        <li><strong>AI/analysis providers:</strong> Our Edge Functions may use third-party AI services (e.g. for skin, teeth, hair analysis and chat) as needed to provide the service. These providers process data according to their respective privacy policies and our instructions.</li>
+        <li><strong>RevenueCat:</strong> Payment and subscription processing. RevenueCat's privacy policy applies to their processing.</li>
+        <li><strong>GetWaitlist:</strong> If you join our waitlist, your email and related data are processed by GetWaitlist according to their privacy policy.</li>
+        <li><strong>Analytics:</strong> Anonymous or pseudonymous usage data to improve the app.</li>
+      </ul>
+      <p>We do not sell your personal information. We may disclose information if required by law, to protect our rights, or in connection with a merger or acquisition.</p>
+
+      <h2 id="retention">9. How Long Do We Keep Your Information?</h2>
+      <p>We keep your information for as long as your account is active or as needed to provide the Services. When you delete your account:</p>
+      <ul>
+        <li>Your user profile, face scans, chat sessions, and related database records are deleted</li>
+        <li>Stored images in Supabase Storage associated with your account are removed</li>
+        <li>We may retain anonymized or aggregated data that no longer identifies you</li>
+      </ul>
+      <p>You can request deletion of your account and data at any time via the app settings or by contacting us at <a href="mailto:info@lookslab.de">info@lookslab.de</a>.</p>
+
+      <h2 id="security">10. How Do We Keep Your Information Safe?</h2>
+      <p>We use industry-standard security measures to protect your data, including:</p>
+      <ul>
+        <li>Encryption in transit (HTTPS/TLS)</li>
+        <li>Secure storage with access controls</li>
+        <li>Authentication via Supabase Auth</li>
+        <li>Limited access to personal data by authorized personnel only</li>
+      </ul>
+      <p>No internet transmission is 100% secure. We cannot guarantee absolute security but we take reasonable steps to protect your information.</p>
+
+      <h2 id="rights">11. What Are Your Privacy Rights?</h2>
+      <p>Depending on your location, you may have the following rights:</p>
+      <ul>
+        <li><strong>EU/UK (GDPR):</strong> Access, rectification, erasure, restriction of processing, data portability, objection, and the right to lodge a complaint with a supervisory authority.</li>
+        <li><strong>California (CCPA/CPRA):</strong> Right to know, delete, correct, and opt out of "sale" or "sharing" of personal information. We do not sell personal information.</li>
+        <li><strong>Other regions:</strong> Similar rights may apply under local laws (e.g. Australia, Canada).</li>
+      </ul>
+      <p>To exercise these rights, contact us at <a href="mailto:info@lookslab.de">info@lookslab.de</a>. We will respond within the timeframe required by applicable law. You may also have the right to withdraw consent where processing is based on consent.</p>
+      <p><strong>Do-Not-Track:</strong> Some browsers offer a "Do Not Track" signal. We do not currently respond to DNT signals, but we limit tracking to what is described in this Policy.</p>
+
+      <h2 id="children">12. Children's Privacy</h2>
+      <p>Our Services are not directed to individuals under 16 (or the applicable age in your jurisdiction). We do not knowingly collect personal information from children. If you believe we have collected data from a child, please contact us at <a href="mailto:info@lookslab.de">info@lookslab.de</a> and we will delete it promptly.</p>
+
+      <h2 id="transfers">13. International Data Transfers</h2>
+      <p>Your data may be processed in countries outside your residence (e.g. EU data may be processed in the US by Supabase or other providers). We ensure appropriate safeguards (e.g. Standard Contractual Clauses, adequacy decisions) where required by law.</p>
+
+      <h2 id="updates">14. Updates to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top reflects the latest version. Material changes may be communicated via the app or email. We encourage you to review this Policy periodically.</p>
+
+      <h2 id="contact">15. Contact Us</h2>
+      <p>For questions, to exercise your rights, or to report a concern:</p>
+      <p><strong>Email:</strong> <a href="mailto:info@lookslab.de">info@lookslab.de</a></p>
+      <p>We will respond as soon as practicable, typically within 30 days for formal requests.</p>
+
+      <p style="margin-top: 40px;"><a href="./index.html" class="back">← Zurück zur Startseite</a></p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
