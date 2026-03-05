@@ -393,6 +393,26 @@ body {
   margin: 0 auto;
 }
 
+/* Social */
+.social-section {
+  padding-top: 24px;
+}
+
+.social-inner {
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  min-width: 140px;
+}
+
 /* Footer */
 .footer {
   border-top: 1px solid var(--line);
@@ -489,6 +509,10 @@ body {
   .cta-section {
     padding: 56px 0;
   }
+
+  .social-section {
+    padding-top: 16px;
+  }
 }
 
 /* Mobile */
@@ -556,6 +580,15 @@ body {
 
   .cta-section {
     padding: 40px 0;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .social-btn {
+    width: 100%;
   }
 
   .cta-inner h2 {
