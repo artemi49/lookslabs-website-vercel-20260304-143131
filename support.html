@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="./favicon.png" />
+    <title>Help & Support – LooksLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .support-page { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+      @media (max-width: 600px) { .support-page { padding: 32px 16px 60px; } }
+      .support-page h1 { font-size: 1.75rem; margin: 0 0 8px; }
+      .support-page .subtitle { color: var(--muted); font-size: 1rem; margin-bottom: 32px; }
+      .support-page h2 { font-size: 1.15rem; margin: 28px 0 12px; }
+      .support-page p, .support-page li { color: var(--muted); line-height: 1.7; margin: 0 0 12px; }
+      .support-page ul { padding-left: 20px; margin: 0 0 16px; }
+      .support-page a { color: var(--dark); font-weight: 600; }
+      .support-page .back { display: inline-block; margin-bottom: 24px; text-decoration: none; color: var(--muted); font-weight: 500; }
+      .support-page .back:hover { color: var(--text); }
+      .support-card {
+        background: var(--bg-alt, #f5f5f5);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 16px;
+      }
+      .support-card h3 { font-size: 1.05rem; margin: 0 0 8px; }
+      .support-card p { margin: 0; }
+      .contact-btn {
+        display: inline-block;
+        padding: 14px 28px;
+        background: var(--dark, #111);
+        color: #fff;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-top: 8px;
+        transition: opacity 0.2s;
+      }
+      .contact-btn:hover { opacity: 0.85; }
+      .faq-support details {
+        background: var(--bg-alt, #f5f5f5);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 10px;
+      }
+      .faq-support summary {
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 0.95rem;
+      }
+      .faq-support details[open] summary { margin-bottom: 10px; }
+      .faq-support details p { font-size: 0.9rem; }
+    </style>
+  </head>
+  <body>
+    <div class="support-page">
+      <a href="./index.html" class="back">← Zurück zur Startseite</a>
+
+      <h1>Help & Support</h1>
+      <p class="subtitle">Wir helfen dir gerne weiter. Finde hier Antworten oder kontaktiere uns direkt.</p>
+
+      <div class="support-card">
+        <h3>📧 E-Mail Support</h3>
+        <p>Schreib uns bei Fragen, Problemen oder Feedback.</p>
+        <a class="contact-btn" href="mailto:info@lookslab.de?subject=LooksLab%20Support">info@lookslab.de</a>
+      </div>
+
+      <div class="support-card">
+        <h3>⏱ Antwortzeit</h3>
+        <p>Wir antworten in der Regel innerhalb von 24 Stunden (werktags).</p>
+      </div>
+
+      <h2>Häufige Fragen</h2>
+      <div class="faq-support">
+        <details>
+          <summary>Wie funktioniert der Face Harmony Scan?</summary>
+          <p>Der Scan analysiert dein Gesicht anhand von über 30 Gesichtsverhältnissen (Ratios). Die Landmark-Erkennung läuft direkt auf deinem Gerät. Die Ergebnisse werden sicher in der Cloud gespeichert.</p>
+        </details>
+        <details>
+          <summary>Was passiert mit meinen Fotos?</summary>
+          <p>Deine Fotos werden verschlüsselt übertragen und sicher gespeichert. Sie werden nicht für Marketing, Werbung oder KI-Training verwendet. Du kannst sie jederzeit löschen.</p>
+        </details>
+        <details>
+          <summary>Wie kann ich mein Abo verwalten?</summary>
+          <p>Gehe zu Einstellungen → dein Apple-ID → Abonnements. Dort kannst du dein LooksLab-Abo ändern oder kündigen.</p>
+        </details>
+        <details>
+          <summary>Wie kann ich Käufe wiederherstellen?</summary>
+          <p>Gehe in der App zu Einstellungen → "Restore Purchases". Deine aktiven Abonnements werden automatisch wiederhergestellt.</p>
+        </details>
+        <details>
+          <summary>Wie lösche ich meinen Account?</summary>
+          <p>Gehe in der App zu Einstellungen → "Delete Account". Alle deine Daten werden unwiderruflich gelöscht. Alternativ kannst du uns per E-Mail kontaktieren.</p>
+        </details>
+        <details>
+          <summary>Warum werden meine Ergebnisse nicht angezeigt?</summary>
+          <p>Stelle sicher, dass du eine stabile Internetverbindung hast. Falls das Problem bestehen bleibt, versuche dich abzumelden und erneut anzumelden oder kontaktiere uns.</p>
+        </details>
+        <details>
+          <summary>Gibt es ein Tageslimit für KI-Features?</summary>
+          <p>Ja, um Missbrauch zu vermeiden, gibt es tägliche Limits: 50 Chat-Nachrichten, 10 Analysen pro Typ (Skin/Teeth/Hair) und 20 Task-Generierungen pro Tag. Die Limits setzen sich nach 24 Stunden zurück.</p>
+        </details>
+        <details>
+          <summary>Gibt es eine Android-Version?</summary>
+          <p>Aktuell ist LooksLab nur für iPhone verfügbar. Eine Android-Version ist für die Zukunft geplant.</p>
+        </details>
+      </div>
+
+      <h2>Weitere Links</h2>
+      <ul>
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./impressum.html">Impressum</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (Apple EULA)</a></li>
+      </ul>
+
+      <p style="margin-top: 40px;">
+        <a href="./index.html" class="back">← Zurück zur Startseite</a> ·
+        <a href="./impressum.html">Impressum</a> ·
+        <a href="./privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
