@@ -1,0 +1,103 @@
+#consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(10, 10, 10, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 20px 24px;
+  animation: cb-slide 0.35s ease;
+}
+@keyframes cb-slide {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.consent-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.consent-inner p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  flex: 1;
+}
+.consent-inner a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.consent-btns {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.consent-btn {
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.86rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.consent-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+.cb-accept {
+  background: #fff;
+  color: #111;
+}
+.cb-necessary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.waitlist-consent-note {
+  text-align: center;
+  padding: 24px 16px;
+  color: var(--muted, #888);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.waitlist-consent-note button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: 1px solid var(--line, #ddd);
+  background: var(--bg, #fff);
+  color: var(--text, #111);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.waitlist-consent-note button:hover {
+  border-color: var(--text, #111);
+}
+
+@media (max-width: 640px) {
+  #consent-banner { padding: 18px 16px; }
+  .consent-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .consent-btns {
+    width: 100%;
+    flex-direction: column;
+  }
+  .consent-btn { width: 100%; padding: 12px 22px; }
+}
