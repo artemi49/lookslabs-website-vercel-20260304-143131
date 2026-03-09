@@ -77,6 +77,7 @@
       <p>Wir verarbeiten Ihre Daten auf folgenden Rechtsgrundlagen:</p>
       <ul>
         <li><strong>Einwilligung (Art. 6 Abs. 1 lit. a):</strong> Für die Verarbeitung von Gesichtsbildern, biometrischen Daten, Warteliste-Eintragung und den Einsatz nicht notwendiger Drittanbieter-Dienste.</li>
+        <li><strong>Besondere Kategorien personenbezogener Daten (Art. 9 Abs. 2 lit. a):</strong> Soweit biometrische Daten verarbeitet werden, erfolgt dies nur auf Grundlage Ihrer ausdrücklichen Einwilligung.</li>
         <li><strong>Vertragserfüllung (Art. 6 Abs. 1 lit. b):</strong> Für die Bereitstellung unserer App-Funktionen, Account-Verwaltung und Abonnement-Abwicklung.</li>
         <li><strong>Berechtigte Interessen (Art. 6 Abs. 1 lit. f):</strong> Für Verbesserung der App, Sicherheitsmaßnahmen und Analyse der Nutzung.</li>
         <li><strong>Gesetzliche Verpflichtung (Art. 6 Abs. 1 lit. c):</strong> Soweit gesetzlich erforderlich (z. B. steuerliche Aufbewahrung).</li>
@@ -125,14 +126,23 @@
       <h3>7.4 Zahlungen (RevenueCat / Apple)</h3>
       <p>Bei Abschluss eines Abonnements oder In-App-Kaufs verarbeitet RevenueCat bzw. Apple die Zahlungs- und Abonnement-Daten. Wir erhalten den Abonnement-Status und zugehörige Kennungen, um Premium-Funktionen freizuschalten. Vollständige Zahlungsdaten werden bei uns nicht gespeichert.</p>
 
+      <h2>8.1 App-Berechtigungen (iOS)</h2>
+      <p>Unsere App kann folgende Berechtigungen anfragen:</p>
+      <ul>
+        <li><strong>Kamera:</strong> Für Face-Scans und Analysefotos.</li>
+        <li><strong>Foto-Mediathek:</strong> Für den Upload von Bildern aus Ihrer Galerie.</li>
+        <li><strong>Mitteilungen (optional):</strong> Für Erinnerungen, Updates und Fortschritts-Hinweise.</li>
+      </ul>
+      <p>Sie können Berechtigungen jederzeit in den iOS-Einstellungen widerrufen oder anpassen. Ohne Kamera-/Fotozugriff sind bestimmte Kernfunktionen nicht nutzbar.</p>
+
       <h2>8. Empfänger und Drittanbieter</h2>
       <ul>
-        <li><strong>Supabase (EU/US):</strong> Auth, Datenbank und Storage – Hosting von Account-, Profil-, Scan-, Chat- und Analysedaten. Supabase verarbeitet Daten in unserem Auftrag (Auftragsverarbeitung).</li>
+        <li><strong>Supabase (EU/US):</strong> Auth, Datenbank und Storage – Hosting von Account-, Profil-, Scan-, Chat- und Analysedaten. Supabase verarbeitet Daten in unserem Auftrag (Auftragsverarbeitung). Datenschutz: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>.</li>
         <li><strong>KI-/Analyseanbieter:</strong> Unsere Edge Functions können Drittanbieter-KI-Dienste nutzen (z. B. für Skin-, Teeth-, Hair-Analyse und Chat). Diese Anbieter verarbeiten Daten gemäß ihren Datenschutzrichtlinien und unseren Anweisungen.</li>
-        <li><strong>RevenueCat (US):</strong> Zahlungs- und Abonnement-Verarbeitung.</li>
-        <li><strong>GetWaitlist (US):</strong> Verarbeitung Ihrer E-Mail und zugehöriger Daten bei Wartelisten-Eintragung.</li>
-        <li><strong>Google Fonts (Google LLC, US):</strong> Beim Laden unserer Website werden Schriftarten von Google-Servern geladen. Dabei kann Ihre IP-Adresse an Google übermittelt werden.</li>
-        <li><strong>Cloudflare (US):</strong> Font Awesome Icons werden über das Cloudflare CDN geladen.</li>
+        <li><strong>RevenueCat (US):</strong> Zahlungs- und Abonnement-Verarbeitung. Datenschutz: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a>.</li>
+        <li><strong>GetWaitlist (US):</strong> Verarbeitung Ihrer E-Mail und zugehöriger Daten bei Wartelisten-Eintragung. Datenschutz: <a href="https://www.getwaitlist.com/privacy-policy" target="_blank" rel="noopener noreferrer">getwaitlist.com/privacy-policy</a>.</li>
+        <li><strong>Google Fonts (Google LLC, US):</strong> Beim Laden unserer Website werden Schriftarten von Google-Servern geladen. Dabei kann Ihre IP-Adresse an Google übermittelt werden. Datenschutz: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</li>
+        <li><strong>Cloudflare (US):</strong> Font Awesome Icons werden über das Cloudflare CDN geladen. Datenschutz: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">cloudflare.com/privacypolicy</a>.</li>
       </ul>
       <p>Wir verkaufen Ihre personenbezogenen Daten nicht. Wir können Daten offenlegen, wenn dies gesetzlich erforderlich ist, zum Schutz unserer Rechte oder im Zusammenhang mit einer Unternehmensumstrukturierung.</p>
 
@@ -167,6 +177,13 @@
         <li>Gespeicherte Bilder in Supabase Storage entfernt</li>
         <li>Anonymisierte oder aggregierte Daten, die Sie nicht mehr identifizieren, können erhalten bleiben</li>
       </ul>
+      <p>Zusätzlich gelten in der Regel folgende Fristen:</p>
+      <ul>
+        <li><strong>Wartelisten-Daten ohne bestätigte Anmeldung:</strong> Löschung nach spätestens 90 Tagen.</li>
+        <li><strong>Support-Anfragen:</strong> Löschung bzw. Anonymisierung nach spätestens 12 Monaten, sofern keine gesetzliche Aufbewahrungspflicht besteht.</li>
+        <li><strong>Analytics-/Nutzungsereignisse:</strong> Aufbewahrung bis zu 24 Monate.</li>
+        <li><strong>Technische Backups:</strong> automatische Überschreibung oder Löschung in der Regel innerhalb von 30 Tagen.</li>
+      </ul>
       <p>Account-Löschung ist jederzeit in der App (Einstellungen → „Delete Account") oder per E-Mail an <a href="mailto:info@lookslab.de">info@lookslab.de</a> möglich.</p>
 
       <h2>13. Sicherheit</h2>
@@ -190,6 +207,9 @@
         <li><strong>Widerruf der Einwilligung:</strong> Soweit die Verarbeitung auf Einwilligung basiert, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.</li>
       </ul>
       <p>Zur Ausübung Ihrer Rechte kontaktieren Sie uns unter <a href="mailto:info@lookslab.de">info@lookslab.de</a>. Wir antworten innerhalb von 30 Tagen.</p>
+
+      <h3>Automatisierte Entscheidungen / Profiling</h3>
+      <p>Es findet keine ausschließlich automatisierte Entscheidungsfindung im Sinne von Art. 22 DSGVO statt, die Ihnen gegenüber rechtliche Wirkung entfaltet oder Sie in ähnlicher Weise erheblich beeinträchtigt.</p>
 
       <h3>Beschwerderecht</h3>
       <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist z. B.:</p>

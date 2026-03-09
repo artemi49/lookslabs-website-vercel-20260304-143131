@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,8 +32,8 @@
   </head>
   <body>
     <div class="privacy-page">
-      <a href="./index.html" class="back">← Zurück zur Startseite</a>
-      <p><a href="./impressum.html">Zum Impressum</a> · <a href="./datenschutz.html">Deutsche Version</a></p>
+      <a href="./index-en.html" class="back">← Back to home</a>
+      <p><a href="./impressum.html">Imprint</a> · <a href="./datenschutz.html">German Version</a></p>
 
       <h1>Privacy Policy</h1>
       <p class="updated">Last updated: March 3, 2026</p>
@@ -109,7 +109,7 @@
         <li>Improve our Services and analytics</li>
         <li>Respond to support requests and communicate with you</li>
       </ul>
-      <p><strong>Legal bases (where applicable, e.g. GDPR):</strong> We process your data based on (a) your consent, (b) performance of our contract with you, (c) our legitimate interests (e.g. improving the app, security), or (d) legal obligations.</p>
+      <p><strong>Legal bases (where applicable, e.g. GDPR):</strong> We process your data based on (a) your consent, (b) explicit consent for special category data where applicable (Art. 9(2)(a) GDPR), (c) performance of our contract with you, (d) our legitimate interests (e.g. improving the app, security), or (e) legal obligations.</p>
 
       <h2 id="facial">6. Facial Image & Biometric Processing</h2>
       <p>When you use our scan features, you capture or upload photos. These images are:</p>
@@ -136,13 +136,24 @@
       <h3>7.4 Payments (RevenueCat)</h3>
       <p>When you subscribe or make in-app purchases, RevenueCat processes payment and subscription data. We receive subscription status and related identifiers to unlock premium features. We do not store full payment card details.</p>
 
+      <h2>7.5 App Permissions (iOS)</h2>
+      <p>Our app may request the following permissions:</p>
+      <ul>
+        <li><strong>Camera:</strong> To capture scan photos for facial analysis.</li>
+        <li><strong>Photo Library:</strong> To upload images from your gallery.</li>
+        <li><strong>Notifications (optional):</strong> For reminders, updates, and progress notifications.</li>
+      </ul>
+      <p>You can revoke or change permissions at any time in iOS settings. Without camera/photo permissions, some core features are not available.</p>
+
       <h2 id="share">8. When and With Whom Do We Share Your Information?</h2>
       <p>We may share information with:</p>
       <ul>
-        <li><strong>Supabase:</strong> Auth, database, and storage (hosting of your account, profile, scans, chat, and analysis data). Supabase is a service provider that processes data on our behalf.</li>
+        <li><strong>Supabase:</strong> Auth, database, and storage (hosting of your account, profile, scans, chat, and analysis data). Supabase is a service provider that processes data on our behalf. Privacy policy: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>.</li>
         <li><strong>AI/analysis providers:</strong> Our Edge Functions may use third-party AI services (e.g. for skin, teeth, hair analysis and chat) as needed to provide the service. These providers process data according to their respective privacy policies and our instructions.</li>
-        <li><strong>RevenueCat:</strong> Payment and subscription processing. RevenueCat's privacy policy applies to their processing.</li>
-        <li><strong>GetWaitlist:</strong> If you join our waitlist, your email and related data are processed by GetWaitlist according to their privacy policy.</li>
+        <li><strong>RevenueCat:</strong> Payment and subscription processing. RevenueCat's privacy policy applies to their processing: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a>.</li>
+        <li><strong>GetWaitlist:</strong> If you join our waitlist, your email and related data are processed by GetWaitlist according to their privacy policy: <a href="https://www.getwaitlist.com/privacy-policy" target="_blank" rel="noopener noreferrer">getwaitlist.com/privacy-policy</a>.</li>
+        <li><strong>Google Fonts:</strong> Our website loads webfonts from Google, which may process your IP address. Privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</li>
+        <li><strong>Cloudflare CDN:</strong> Font Awesome assets are loaded via Cloudflare CDN. Privacy policy: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">cloudflare.com/privacypolicy</a>.</li>
         <li><strong>Analytics:</strong> Anonymous or pseudonymous usage data to improve the app.</li>
       </ul>
       <p>We do not sell your personal information. We may disclose information if required by law, to protect our rights, or in connection with a merger or acquisition.</p>
@@ -153,6 +164,13 @@
         <li>Your user profile, face scans, chat sessions, and related database records are deleted</li>
         <li>Stored images in Supabase Storage associated with your account are removed</li>
         <li>We may retain anonymized or aggregated data that no longer identifies you</li>
+      </ul>
+      <p>In addition, we generally apply these retention periods:</p>
+      <ul>
+        <li><strong>Waitlist records without confirmed sign-up:</strong> deleted within 90 days.</li>
+        <li><strong>Support requests:</strong> deleted or anonymized within 12 months unless legal retention applies.</li>
+        <li><strong>Analytics events:</strong> stored for up to 24 months.</li>
+        <li><strong>Technical backups:</strong> overwritten or deleted within 30 days in normal operation.</li>
       </ul>
       <p>You can request deletion of your account and data at any time via the app settings or by contacting us at <a href="mailto:info@lookslab.de">info@lookslab.de</a>.</p>
 
@@ -174,6 +192,7 @@
         <li><strong>Other regions:</strong> Similar rights may apply under local laws (e.g. Australia, Canada).</li>
       </ul>
       <p>To exercise these rights, contact us at <a href="mailto:info@lookslab.de">info@lookslab.de</a>. We will respond within the timeframe required by applicable law. You may also have the right to withdraw consent where processing is based on consent.</p>
+      <p><strong>Automated decision-making:</strong> We do not carry out solely automated decision-making that produces legal or similarly significant effects on you within the meaning of Art. 22 GDPR.</p>
       <p><strong>Do-Not-Track:</strong> Some browsers offer a "Do Not Track" signal. We do not currently respond to DNT signals, but we limit tracking to what is described in this Policy.</p>
 
       <h2 id="children">12. Children's Privacy</h2>
@@ -191,9 +210,9 @@
       <p>We will respond as soon as practicable, typically within 30 days for formal requests.</p>
 
       <p style="margin-top: 40px;">
-        <a href="./index.html" class="back">← Zurück zur Startseite</a> ·
-        <a href="./impressum.html">Impressum</a> ·
-        <a href="./datenschutz.html">Deutsche Version</a> ·
+        <a href="./index-en.html" class="back">← Back to home</a> ·
+        <a href="./impressum.html">Imprint</a> ·
+        <a href="./datenschutz.html">German Version</a> ·
         <a href="./terms.html">Terms of Use</a>
       </p>
     </div>
