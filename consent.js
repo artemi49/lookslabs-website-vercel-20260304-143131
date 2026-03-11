@@ -3,10 +3,12 @@
   var saved = localStorage.getItem(KEY);
   var isEN = (document.documentElement.lang || 'de') === 'en';
 
-  if (saved === 'all') { loadThirdParty(); return; }
-  if (saved === 'necessary') { loadThirdParty(); return; }
+  // Keep the waitlist visible immediately, independent of consent choice.
+  loadThirdParty();
 
-  showBanner();
+  if (!saved) {
+    showBanner();
+  }
 
   function showBanner() {
     var b = document.createElement('div');
