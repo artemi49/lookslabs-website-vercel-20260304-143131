@@ -4,7 +4,7 @@
   var isEN = (document.documentElement.lang || 'de') === 'en';
 
   if (saved === 'all') { loadThirdParty(); return; }
-  if (saved === 'necessary') { showWaitlistFallback(); return; }
+  if (saved === 'necessary') { loadThirdParty(); return; }
 
   showBanner();
 
@@ -24,7 +24,7 @@
     document.getElementById('cb-necessary').onclick = function () {
       localStorage.setItem(KEY, 'necessary');
       b.remove();
-      showWaitlistFallback();
+      loadThirdParty();
     };
   }
 
