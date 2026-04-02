@@ -32,7 +32,7 @@
       <p><a href="./impressum.html">Zum Impressum</a> · <a href="./privacy.html">English Version</a></p>
 
       <h1>Datenschutzerklärung</h1>
-      <p class="updated">Stand: 12. März 2026</p>
+      <p class="updated">Stand: 2. April 2026</p>
 
       <h2>1. Verantwortlicher</h2>
       <p>
@@ -58,13 +58,13 @@
       <ul>
         <li><strong>Account-Daten:</strong> Bei der Registrierung (z. B. anonym über Supabase Auth) speichern wir eine User-ID und Sitzungsdaten.</li>
         <li><strong>Profildaten:</strong> Geschlecht, Alter, Ethnie, Größe, Gewicht, Fitness-Level, Hauttyp, Augenfarbe, Benachrichtigungspräferenzen und Kamera-Berechtigung.</li>
-        <li><strong>Gesichtsbilder:</strong> Fotos, die Sie für Face Harmony Scan, Skin-, Teeth- oder Hair-Analyse aufnehmen oder hochladen.</li>
+        <li><strong>Gesichtsbilder:</strong> Fotos, die Sie für Face Harmony Scan, Skin-, Teeth- oder Hair-Analyse aufnehmen. Diese Bilder werden ausschließlich lokal auf Ihrem Gerät verarbeitet und <strong>nicht</strong> auf unseren Servern gespeichert. Nur die daraus abgeleiteten numerischen Ergebnisse (Scores, Metriken, Ratios) werden serverseitig gespeichert.</li>
         <li><strong>Chat-Nachrichten:</strong> Nachrichten im Chat-Coach-Feature.</li>
         <li><strong>Warteliste:</strong> Ihre E-Mail-Adresse und ggf. weitere Angaben über das GetWaitlist-Widget.</li>
       </ul>
 
       <h3>3.2 Sensible Daten / Biometrische Daten</h3>
-      <p>Gesichtsbilder und daraus abgeleitete biometrische Daten (z. B. Gesichtslandmarken, Analyse-Ergebnisse) werden für Face Harmony Scan, Skin-, Teeth- und Hair-Analyse verarbeitet. Diese Bilder werden gespeichert, um Ihnen Scan-Verlauf, personalisierte Empfehlungen und Analyse-Ergebnisse bereitzustellen. Sie werden <strong>nicht</strong> für Gesichtserkennung, Identifizierung, Marketing oder KI-Training verwendet. Wir behandeln diese Daten mit besonderer Sorgfalt und halten die geltenden biometrischen und datenschutzrechtlichen Vorschriften ein.</p>
+      <p>Gesichtsbilder werden ausschließlich lokal auf Ihrem Gerät verarbeitet und <strong>nicht</strong> auf unsere Server hochgeladen oder dort gespeichert. Lediglich die daraus abgeleiteten numerischen Analyse-Ergebnisse (z. B. Scores, Proportionen, Metriken) werden serverseitig gespeichert, um Ihnen Scan-Verlauf, personalisierte Empfehlungen und Analyse-Ergebnisse bereitzustellen. Diese Ergebnisse werden <strong>nicht</strong> für Gesichtserkennung, Identifizierung, Marketing oder KI-Training verwendet. Wir behandeln diese Daten mit besonderer Sorgfalt und halten die geltenden datenschutzrechtlichen Vorschriften ein.</p>
 
       <h3>3.3 Automatisch erhobene Daten</h3>
       <ul>
@@ -98,21 +98,21 @@
       <h2>6. Gesichtsbilder &amp; Biometrische Verarbeitung</h2>
       <p><strong>Einwilligungsablauf in der App:</strong> Vor der Analyse müssen Nutzer bestätigen, dass sie ein eigenes Foto verwenden oder eine ausdrückliche Einwilligung haben, und der Verarbeitung von Gesichtsbildern und abgeleiteten Analysedaten zustimmen.</p>
       <p><strong>Zweckbindung:</strong> Gesichtsdaten werden ausschließlich für persönliche Self-Care- und Selbstverbesserungsfunktionen des jeweiligen Account-Inhabers verarbeitet und nicht zur Bewertung, Herabwürdigung oder gezielten Beurteilung anderer Personen genutzt.</p>
-      <p>Wenn Sie unsere Scan-Funktionen nutzen, werden Ihre Fotos:</p>
+      <p>Wenn Sie unsere Scan-Funktionen nutzen:</p>
       <ul>
-        <li>Verschlüsselt übertragen (HTTPS/TLS)</li>
-        <li>In Supabase Storage sicher gespeichert, um Ihren Scan-Verlauf und Ergebnisse bereitzustellen</li>
-        <li>Für Face Harmony, Skin-, Teeth- &amp; Hair-Analyse verarbeitet (ggf. unter Einsatz von KI-Diensten über Supabase Edge Functions)</li>
-        <li><strong>Nicht</strong> für Gesichtserkennung, Identifizierung oder KI-Modell-Training verwendet</li>
-        <li><strong>Nicht</strong> an Dritte für Marketing oder Werbung weitergegeben</li>
+        <li>Ihre Fotos werden <strong>ausschließlich lokal auf Ihrem Gerät</strong> verarbeitet und verbleiben dort</li>
+        <li>Es werden <strong>keine Bilder</strong> auf unsere Server hochgeladen oder dort gespeichert</li>
+        <li>Nur die abgeleiteten numerischen Ergebnisse (Scores, Metriken, Proportionen) werden verschlüsselt (HTTPS/TLS) an unsere Server übertragen und dort gespeichert</li>
+        <li>Diese Ergebnisse werden <strong>nicht</strong> für Gesichtserkennung, Identifizierung oder KI-Modell-Training verwendet</li>
+        <li>Diese Ergebnisse werden <strong>nicht</strong> an Dritte für Marketing oder Werbung weitergegeben</li>
         <li>Nur für persönliche Self-Care- und Selbstverbesserungsfunktionen innerhalb der App genutzt</li>
       </ul>
 
       <h3>6.1 Face Harmony Scan</h3>
-      <p>Die Gesichtslandmark-Erkennung läuft primär auf Ihrem Gerät (z. B. über MediaPipe). Nur die resultierenden Scores, Metriken und optional das Bild werden in unserer Cloud gespeichert.</p>
+      <p>Die Gesichtslandmark-Erkennung läuft vollständig auf Ihrem Gerät (z. B. über MediaPipe). Nur die resultierenden numerischen Scores und Metriken werden in unserer Datenbank gespeichert. Bilder verbleiben lokal auf Ihrem Gerät.</p>
 
       <h3>6.2 Skin-, Teeth- &amp; Hair-Analyse</h3>
-      <p>Bilder werden an unsere Supabase Edge Functions gesendet (z. B. analyze-skin, analyze-teeth, analyze-hair). Diese können KI-/ML-Dienste nutzen, um Analysen zu erstellen. Bilder werden vor der Übertragung komprimiert. Ergebnisse und Bilder werden in unserer Datenbank gespeichert.</p>
+      <p>Bilder werden an unsere Supabase Edge Functions gesendet (z. B. analyze-skin, analyze-teeth, analyze-hair), um KI-gestützte Analysen zu erstellen. Die Bilder werden vor der Übertragung komprimiert und ausschließlich zur Erzeugung der Analyse-Ergebnisse verwendet. Nach der Verarbeitung werden die Bilder <strong>nicht</strong> serverseitig gespeichert — nur die resultierenden Analyse-Ergebnisse werden in unserer Datenbank abgelegt.</p>
       <p>Sie können einzelne Scans oder Ihren gesamten Account jederzeit löschen. Kontaktieren Sie uns unter <a href="mailto:info@lookslab.de">info@lookslab.de</a>.</p>
 
       <h2>7. Feature-spezifische Verarbeitung</h2>
@@ -140,8 +140,8 @@
 
       <h2>8. Empfänger und Drittanbieter</h2>
       <ul>
-        <li><strong>Supabase (EU/US):</strong> Auth, Datenbank und Storage – Hosting von Account-, Profil-, Scan-, Chat- und Analysedaten. Supabase verarbeitet Daten in unserem Auftrag (Auftragsverarbeitung). Datenschutz: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>.</li>
-        <li><strong>KI-/Analyseanbieter:</strong> Unsere Edge Functions können Drittanbieter-KI-Dienste nutzen (einschließlich OpenAI, z. B. für Skin-, Teeth-, Hair-Analyse und Chat). Diese Anbieter handeln als Auftragsverarbeiter nach unseren Weisungen und vertraglichen Schutzmaßnahmen und müssen ein gleiches oder gleichwertiges Datenschutzniveau wie wir bereitstellen.</li>
+        <li><strong>Supabase (EU/US):</strong> Auth und Datenbank – Hosting von Account-, Profil-, Scan-Ergebnis-, Chat- und Analysedaten. Es werden keine Bilder bei Supabase gespeichert. Supabase verarbeitet Daten in unserem Auftrag (Auftragsverarbeitung). Datenschutz: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>.</li>
+        <li><strong>KI-/Analyseanbieter:</strong> Unsere Edge Functions können Drittanbieter-KI-Dienste nutzen (einschließlich OpenAI, z. B. für Skin-, Teeth-, Hair-Analyse und Chat). Bilder werden dabei zur Erzeugung von Analyse-Ergebnissen verarbeitet, aber <strong>nicht</strong> dauerhaft gespeichert. Diese Anbieter handeln als Auftragsverarbeiter nach unseren Weisungen und vertraglichen Schutzmaßnahmen und müssen ein gleiches oder gleichwertiges Datenschutzniveau wie wir bereitstellen.</li>
         <li><strong>RevenueCat (US):</strong> Zahlungs- und Abonnement-Verarbeitung. Datenschutz: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a>.</li>
         <li><strong>GetWaitlist (US):</strong> Verarbeitung Ihrer E-Mail und zugehöriger Daten bei Wartelisten-Eintragung. Datenschutz: <a href="https://www.getwaitlist.com/privacy-policy" target="_blank" rel="noopener noreferrer">getwaitlist.com/privacy-policy</a>.</li>
         <li><strong>Google Fonts (Google LLC, US):</strong> Beim Laden unserer Website werden Schriftarten von Google-Servern geladen. Dabei kann Ihre IP-Adresse an Google übermittelt werden. Datenschutz: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</li>
@@ -176,11 +176,10 @@
       <h2>12. Speicherdauer</h2>
       <p>Wir speichern Ihre Daten so lange, wie Ihr Account aktiv ist oder es für die Bereitstellung der Dienste erforderlich ist. Bei Löschung Ihres Accounts werden:</p>
       <ul>
-        <li>Profil, Scans, Chat-Verläufe und zugehörige Datenbank-Einträge gelöscht</li>
-        <li>Gespeicherte Bilder in Supabase Storage entfernt</li>
+        <li>Profil, Scan-Ergebnisse, Chat-Verläufe und alle zugehörigen Datenbank-Einträge vollständig gelöscht</li>
         <li>Anonymisierte oder aggregierte Daten, die Sie nicht mehr identifizieren, können erhalten bleiben</li>
       </ul>
-      <p><strong>Speicherdauer von Gesichtsdaten:</strong> Gesichtsbilder und daraus abgeleitete Analysedaten werden während eines aktiven Accounts gespeichert, um Verlauf und Funktionen bereitzustellen. Beim Löschen einzelner Scans oder des gesamten Accounts werden zugehörige Gesichtsdaten aus aktiven Systemen und Storage entfernt. Backup-Daten werden im regulären Betrieb überschrieben oder gelöscht.</p>
+      <p><strong>Speicherdauer von Analyse-Ergebnissen:</strong> Numerische Analyse-Ergebnisse (Scores, Metriken, Proportionen) werden während eines aktiven Accounts gespeichert, um Verlauf und Funktionen bereitzustellen. Bilder werden nicht serverseitig gespeichert und verbleiben ausschließlich lokal auf Ihrem Gerät. Beim Löschen einzelner Scans oder des gesamten Accounts werden alle zugehörigen Ergebnisse aus der Datenbank entfernt. Backup-Daten werden im regulären Betrieb überschrieben oder gelöscht.</p>
       <p>Zusätzlich gelten in der Regel folgende Fristen:</p>
       <ul>
         <li><strong>Wartelisten-Daten ohne bestätigte Anmeldung:</strong> Löschung nach spätestens 90 Tagen.</li>

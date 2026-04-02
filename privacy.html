@@ -36,7 +36,7 @@
       <p><a href="./impressum.html">Imprint</a> · <a href="./datenschutz.html">German Version</a></p>
 
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: March 12, 2026</p>
+      <p class="updated">Last updated: April 2, 2026</p>
 
       <h2>1. Introduction</h2>
       <p>This Privacy Policy ("Policy") for LooksLab ("we," "us," or "our") describes how and why we access, collect, store, use, and share ("process") your personal information when you use our services ("Services"), including when you:</p>
@@ -70,11 +70,11 @@
       <h2 id="summary">3. Summary of Key Points</h2>
       <ul>
         <li><strong>What we process:</strong> Account data, profile data (gender, age, skin type, etc.), facial images for analysis, chat messages, usage data, and payment data (when applicable via RevenueCat).</li>
-        <li><strong>Facial images:</strong> We process facial images for Face Harmony Scan, Skin, Teeth & Hair analysis. Images are stored securely in Supabase to provide your scan history and analysis results. We do not use facial images to train AI models or for marketing.</li>
+        <li><strong>Facial images:</strong> Images are processed locally on your device or temporarily via our Edge Functions for analysis. <strong>No images are stored on our servers.</strong> Only the resulting numerical scores, metrics, and ratios are stored in our database. We do not use facial images to train AI models or for marketing.</li>
         <li><strong>Consent and user confirmation:</strong> Before analysis, users must confirm they either use their own face photo or have explicit permission, and must consent to facial image and derived-data processing.</li>
         <li><strong>Intended use:</strong> LooksLab is designed for personal self-improvement and self-care insights. It is not intended for judging or rating other people.</li>
-        <li><strong>Face Harmony:</strong> Facial landmark analysis runs on your device (MediaPipe). Only scan results and optional images are stored in the cloud.</li>
-        <li><strong>Third parties:</strong> We use Supabase (auth, storage, database), third-party AI providers via Supabase Edge Functions (including OpenAI), RevenueCat (payments), and analytics. We do not sell your data.</li>
+        <li><strong>Face Harmony:</strong> Facial landmark analysis runs on your device (MediaPipe). Only the resulting numerical scores and metrics are stored in the cloud. Images remain on your device.</li>
+        <li><strong>Third parties:</strong> We use Supabase (auth, database), third-party AI providers via Supabase Edge Functions (including OpenAI), RevenueCat (payments), and analytics. No images are stored with any third party. We do not sell your data.</li>
         <li><strong>Your rights:</strong> Access, correction, deletion, data portability, and objection where applicable (GDPR, CCPA, etc.). Contact us at <a href="mailto:info@lookslab.de">info@lookslab.de</a> to exercise these rights.</li>
       </ul>
 
@@ -84,13 +84,13 @@
       <ul>
         <li><strong>Account data:</strong> When you sign up (e.g. anonymously via Supabase Auth), we store your user ID and session information.</li>
         <li><strong>Profile data:</strong> During onboarding or in settings, you may provide: gender, age, ethnicity, height, weight, fitness level, skin type, eye color, notification preferences, and camera permission status.</li>
-        <li><strong>Facial images:</strong> Photos you capture or upload for Face Harmony Scan, Skin, Teeth, or Hair analysis.</li>
+        <li><strong>Facial images:</strong> Photos you capture for Face Harmony Scan, Skin, Teeth, or Hair analysis. These images are processed locally on your device and <strong>not</strong> stored on our servers. Only the resulting numerical scores, metrics, and ratios are stored server-side.</li>
         <li><strong>Chat messages:</strong> Messages you send in the Chat Coach feature.</li>
         <li><strong>Waitlist:</strong> If you join our waitlist on the website, we receive your email address and any other information you provide via the GetWaitlist widget.</li>
       </ul>
 
       <h3>4.2 Sensitive Information</h3>
-      <p>Facial images and biometric data derived from them (e.g. facial landmarks, analysis results) are processed for Face Harmony Scan, Skin, Teeth, and Hair analysis. These images are stored to provide your scan history, personalized Daily Task Plan, and analysis results. They are not used for facial recognition, identification, or marketing. We treat this data with heightened care and comply with applicable biometric and data protection laws.</p>
+      <p>Facial images are processed locally on your device and <strong>not</strong> uploaded to or stored on our servers. Only the derived numerical analysis results (e.g. scores, proportions, metrics) are stored server-side to provide your scan history, personalized Daily Task Plan, and analysis results. These results are not used for facial recognition, identification, or marketing. We treat this data with heightened care and comply with applicable data protection laws.</p>
 
       <h3>4.3 Automatically Collected Information</h3>
       <ul>
@@ -116,19 +116,19 @@
       <h2 id="facial">6. Facial Image & Biometric Processing</h2>
       <p><strong>Consent flow in app:</strong> Before starting analysis, users must explicitly confirm photo authorization (own photo or explicit permission) and accept facial image/derived data processing as described in this policy.</p>
       <p><strong>Use limitation:</strong> Face data is processed only to deliver personal self-care and self-improvement features to the account owner. It must not be used to judge, harass, or target other people.</p>
-      <p>When you use our scan features, you capture or upload photos. These images are:</p>
+      <p>When you use our scan features:</p>
       <ul>
-        <li>Transmitted securely (HTTPS) to our servers</li>
-        <li>Stored in Supabase Storage to provide your scan history and analysis results</li>
-        <li>Processed for Face Harmony, Skin, Teeth & Hair analysis (which may involve AI services via Supabase Edge Functions)</li>
-        <li>Not used for facial recognition, identification, or training AI models</li>
-        <li>Not shared with third parties for marketing or advertising</li>
+        <li>Your photos are processed <strong>locally on your device</strong> and remain there</li>
+        <li><strong>No images are uploaded to or stored on our servers</strong></li>
+        <li>Only the derived numerical results (scores, metrics, proportions) are transmitted securely (HTTPS/TLS) and stored in our database</li>
+        <li>Results are not used for facial recognition, identification, or training AI models</li>
+        <li>Results are not shared with third parties for marketing or advertising</li>
         <li>Used only for your own personal self-improvement features in the app</li>
       </ul>
       <h3>6.1 Face Harmony Scan</h3>
-      <p>Face Harmony analysis uses facial landmark detection that runs primarily on your device (e.g. via MediaPipe). Only the resulting scores, metrics, and optionally the image are stored in our cloud. Raw landmark data may be stored to support your scan history.</p>
+      <p>Face Harmony analysis uses facial landmark detection that runs entirely on your device (e.g. via MediaPipe). Only the resulting numerical scores and metrics are stored in our database. Images remain locally on your device.</p>
       <h3>6.2 Skin, Teeth & Hair Analysis</h3>
-      <p>For Skin, Teeth, and Hair analysis, images are sent to our Supabase Edge Functions (e.g. analyze-skin, analyze-teeth, analyze-hair). These functions may use AI/ML services to generate analysis. Images are resized and compressed before transmission. Analysis results and images are stored in our database and storage.</p>
+      <p>For Skin, Teeth, and Hair analysis, images are sent to our Supabase Edge Functions (e.g. analyze-skin, analyze-teeth, analyze-hair) for AI-powered analysis. Images are compressed before transmission and are used solely to generate analysis results. After processing, images are <strong>not</strong> stored on our servers — only the resulting analysis data is saved in our database.</p>
       <p>You can delete individual scan results or your entire account at any time. Contact us at <a href="mailto:info@lookslab.de">info@lookslab.de</a> to request deletion.</p>
 
       <h2 id="features">7. Feature-Specific Data Processing</h2>
@@ -153,8 +153,8 @@
       <h2 id="share">8. When and With Whom Do We Share Your Information?</h2>
       <p>We may share information with:</p>
       <ul>
-        <li><strong>Supabase:</strong> Auth, database, and storage (hosting of your account, profile, scans, chat, and analysis data). Supabase is a service provider that processes data on our behalf. Privacy policy: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>.</li>
-        <li><strong>AI/analysis providers:</strong> Our Edge Functions may use third-party AI services (including OpenAI, for example for skin, teeth, hair analysis and chat) as needed to provide the service. These providers act as processors under our instructions and contractual safeguards, and are required to provide data protection standards that are the same as or equivalent to our own.</li>
+        <li><strong>Supabase:</strong> Auth and database (hosting of your account, profile, scan results, chat, and analysis data). No images are stored with Supabase. Supabase is a service provider that processes data on our behalf. Privacy policy: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>.</li>
+        <li><strong>AI/analysis providers:</strong> Our Edge Functions may use third-party AI services (including OpenAI, for example for skin, teeth, hair analysis and chat) as needed to provide the service. Images are processed temporarily to generate analysis results but are <strong>not</strong> stored permanently. These providers act as processors under our instructions and contractual safeguards, and are required to provide data protection standards that are the same as or equivalent to our own.</li>
         <li><strong>RevenueCat:</strong> Payment and subscription processing. RevenueCat's privacy policy applies to their processing: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a>.</li>
         <li><strong>GetWaitlist:</strong> If you join our waitlist, your email and related data are processed by GetWaitlist according to their privacy policy: <a href="https://www.getwaitlist.com/privacy-policy" target="_blank" rel="noopener noreferrer">getwaitlist.com/privacy-policy</a>.</li>
         <li><strong>Google Fonts:</strong> Our website loads webfonts from Google, which may process your IP address. Privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</li>
@@ -166,11 +166,10 @@
       <h2 id="retention">9. How Long Do We Keep Your Information?</h2>
       <p>We keep your information for as long as your account is active or as needed to provide the Services. When you delete your account:</p>
       <ul>
-        <li>Your user profile, face scans, chat sessions, and related database records are deleted</li>
-        <li>Stored images in Supabase Storage associated with your account are removed</li>
+        <li>Your user profile, scan results, chat sessions, and all related database records are fully deleted</li>
         <li>We may retain anonymized or aggregated data that no longer identifies you</li>
       </ul>
-      <p><strong>Face data retention:</strong> Facial images and derived analysis data are retained while your account is active to provide scan history and features. If you delete scans or delete your account, associated face data is removed from active systems and storage. Backup data is overwritten/deleted in normal operation.</p>
+      <p><strong>Analysis data retention:</strong> Numerical analysis results (scores, metrics, proportions) are retained while your account is active to provide scan history and features. Images are not stored on our servers and remain exclusively on your device. If you delete scans or delete your account, all associated results are removed from the database. Backup data is overwritten/deleted in normal operation.</p>
       <p>In addition, we generally apply these retention periods:</p>
       <ul>
         <li><strong>Waitlist records without confirmed sign-up:</strong> deleted within 90 days.</li>
