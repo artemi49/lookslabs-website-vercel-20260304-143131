@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LooksLab — App Store</title>
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var partner = params.get("ref") || "Webseite_Direkt";
+            var appId = "6760189133";
+            var ptId = "128604503";
+            var qs = "pt=" + ptId + "&ct=" + encodeURIComponent(partner) + "&mt=8";
+            var url = "https://apps.apple.com/app/apple-store/id" + appId + "?" + qs;
+            window.location.replace(url);
+        })();
+    </script>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -18,96 +29,14 @@
             text-align: center;
             padding: 1.5rem;
         }
-        main { max-width: 22rem; width: 100%; }
-        h1 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0 0 0.75rem;
-            letter-spacing: -0.02em;
-        }
-        p.hint {
-            margin: 0 0 1.75rem;
-            font-size: 0.95rem;
-            line-height: 1.45;
-            color: rgba(255, 255, 255, 0.78);
-        }
-        p.fallback {
-            margin: 1.25rem 0 0;
-            font-size: 0.8rem;
-            line-height: 1.4;
-            color: rgba(255, 255, 255, 0.55);
-        }
-        a.btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            min-height: 3rem;
-            padding: 0.75rem 1.25rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #000;
-            background: #fff;
-            border-radius: 0.75rem;
-            text-decoration: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-        a.btn:active { opacity: 0.92; }
-        a.text-link {
-            display: inline-block;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-        noscript .hint { margin-bottom: 1rem; }
+        p { margin: 0; font-size: 0.95rem; color: rgba(255, 255, 255, 0.78); }
+        a { color: #fff; }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var params = new URLSearchParams(window.location.search);
-            var partner = params.get("ref") || "Webseite_Direkt";
-            var appId = "6760189133";
-            var ptId = "128604503";
-            var qs = "pt=" + ptId + "&ct=" + encodeURIComponent(partner) + "&mt=8";
-            var httpsUrl = "https://apps.apple.com/app/apple-store/id" + appId + "?" + qs;
-            var itmsUrl = "itms-apps://itunes.apple.com/app/id" + appId + "?" + qs;
-
-            function isAppleTouchDevice() {
-                var ua = navigator.userAgent || "";
-                if (/iPhone|iPod/i.test(ua)) return true;
-                if (/iPad/i.test(ua)) return true;
-                if (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) return true;
-                return false;
-            }
-
-            var link = document.getElementById("openBtn");
-            var webFallback = document.getElementById("webFallback");
-            if (!link) return;
-
-            if (isAppleTouchDevice()) {
-                link.href = itmsUrl;
-                if (webFallback) {
-                    webFallback.href = httpsUrl;
-                    webFallback.style.display = "inline-block";
-                }
-            } else {
-                link.href = httpsUrl;
-                if (webFallback) webFallback.style.display = "none";
-            }
-        });
-    </script>
 </head>
 <body>
-    <main>
-        <h1>LooksLab</h1>
-        <p class="hint">Tap the button below to open LooksLab in the App Store.</p>
-        <a id="openBtn" class="btn" href="https://apps.apple.com/app/apple-store/id6760189133?pt=128604503&amp;ct=Webseite_Direkt&amp;mt=8">Open in App Store</a>
-        <a id="webFallback" class="text-link" href="#" style="display:none;">Open via web link instead</a>
-        <p class="fallback">If you see &ldquo;action cannot be completed&rdquo; or nothing happens: open this page in <strong>Safari</strong> (use the in-app menu &middot;&middot;&middot;, then &ldquo;Open in browser&rdquo; / &ldquo;Im Browser öffnen&rdquo;), then tap the button again.</p>
-        <noscript>
-            <p class="hint" style="margin-top:1.25rem;">Enable JavaScript for full campaign tracking, or use the link above.</p>
-        </noscript>
-    </main>
+    <p>Opening the App Store&hellip;</p>
+    <noscript>
+        <p><a href="https://apps.apple.com/app/apple-store/id6760189133?pt=128604503&amp;ct=Webseite_Direkt&amp;mt=8">Continue to the App Store</a></p>
+    </noscript>
 </body>
 </html>
