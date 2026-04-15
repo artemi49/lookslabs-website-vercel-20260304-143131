@@ -3,29 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Opening LooksLab…</title>
-    <script>
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const partner = urlParams.get('ref') || 'Webseite_Direkt';
-
-            const appId = "6760189133";
-            const ptId = "128604503";
-
-            const ct = encodeURIComponent(partner);
-            const finalLink = "https://apps.apple.com/app/apple-store/id" + appId + "?pt=" + ptId + "&ct=" + ct + "&mt=8";
-
-            window.location.href = finalLink;
-        };
-    </script>
+    <title>LooksLab — App Store</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #000; color: #fff; text-align: center; padding: 1rem; }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+        }
+        main { max-width: 22rem; width: 100%; }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 0.75rem;
+            letter-spacing: -0.02em;
+        }
+        p.hint {
+            margin: 0 0 1.75rem;
+            font-size: 0.95rem;
+            line-height: 1.45;
+            color: rgba(255, 255, 255, 0.78);
+        }
+        a.btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 3rem;
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            background: #fff;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        a.btn:active { opacity: 0.92; }
+        noscript .hint { margin-bottom: 1rem; }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var params = new URLSearchParams(window.location.search);
+            var partner = params.get("ref") || "Webseite_Direkt";
+            var appId = "6760189133";
+            var ptId = "128604503";
+            var url = "https://apps.apple.com/app/apple-store/id" + appId + "?pt=" + ptId + "&ct=" + encodeURIComponent(partner) + "&mt=8";
+            var link = document.getElementById("openBtn");
+            if (link) link.href = url;
+        });
+    </script>
 </head>
 <body>
-    <p>One moment, opening LooksLab in the App Store…</p>
-    <noscript>
-        <p>JavaScript is disabled. <a href="https://apps.apple.com/app/apple-store/id6760189133?pt=128604503&mt=8" style="color:#fff;">Open the App Store</a></p>
-    </noscript>
+    <main>
+        <h1>LooksLab</h1>
+        <p class="hint">Tap the button below to open LooksLab in the App Store.</p>
+        <a id="openBtn" class="btn" href="https://apps.apple.com/app/apple-store/id6760189133?pt=128604503&amp;ct=Webseite_Direkt&amp;mt=8">Open in App Store</a>
+        <noscript>
+            <p class="hint" style="margin-top:1.25rem;">Enable JavaScript for full campaign tracking, or use the link above.</p>
+        </noscript>
+    </main>
 </body>
 </html>
