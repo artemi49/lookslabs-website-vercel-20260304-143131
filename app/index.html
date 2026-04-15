@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Öffne LooksLab…</title>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const partner = urlParams.get('ref') || 'Webseite_Direkt';
+
+            const appId = "6760189133";
+            const ptId = "128604503";
+
+            const ct = encodeURIComponent(partner);
+            const finalLink = "https://apps.apple.com/app/apple-store/id" + appId + "?pt=" + ptId + "&ct=" + ct + "&mt=8";
+
+            window.location.href = finalLink;
+        };
+    </script>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #000; color: #fff; text-align: center; padding: 1rem; }
+    </style>
+</head>
+<body>
+    <p>Einen Moment, LooksLab wird im App Store geöffnet…</p>
+    <noscript>
+        <p>JavaScript ist deaktiviert. <a href="https://apps.apple.com/app/apple-store/id6760189133?pt=128604503&mt=8" style="color:#fff;">App Store öffnen</a></p>
+    </noscript>
+</body>
+</html>
